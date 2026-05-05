@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate — Support Futuro Vivo</title>
+  <meta name="description" content="Donate to Support Futuro Vivo. 100% of your donation goes directly to Futuro Vivo School in Guerra, Dominican Republic. Donate online via PayPal or by check.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">FV</div>
+        Support Futuro Vivo
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+      <a href="donate.html" class="btn btn-primary nav-cta">Donate Now</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+    <a href="donate.html" class="btn btn-primary mobile-donate">Donate Now</a>
+  </div>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Donate</span>
+      </nav>
+      <h1>Make a Donation</h1>
+      <p>100% of every dollar you give goes directly to the children at Futuro Vivo School. No overhead. No exceptions.</p>
+    </div>
+  </section>
+
+  <!-- ========== DONATE SECTION ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="donate-layout">
+
+        <!-- Main donate card -->
+        <div class="donate-card fade-in">
+          <h2>Give Today</h2>
+          <p class="subtitle">Choose an amount below, then complete your donation securely through PayPal. You do not need a PayPal account — all major credit and debit cards are accepted.</p>
+
+          <p style="font-size:.85rem; font-weight:600; color:var(--text-dark); margin-bottom:.75rem;">Select an amount</p>
+          <div class="amount-grid">
+            <button class="amount-btn" data-amount="25">
+              $25
+              <span class="amount-sub">Supplies for 1 child</span>
+            </button>
+            <button class="amount-btn selected" data-amount="50">
+              $50
+              <span class="amount-sub">One month of meals</span>
+            </button>
+            <button class="amount-btn" data-amount="100">
+              $100
+              <span class="amount-sub">Medical visit support</span>
+            </button>
+            <button class="amount-btn" data-amount="250">
+              $250
+              <span class="amount-sub">One semester of care</span>
+            </button>
+            <button class="amount-btn" data-amount="500">
+              $500
+              <span class="amount-sub">Full year of support</span>
+            </button>
+            <button class="amount-btn" data-amount="">
+              Other
+              <span class="amount-sub">Any amount helps</span>
+            </button>
+          </div>
+
+          <div class="divider">or donate any amount</div>
+
+          <!-- PayPal form -->
+          <form
+            action="https://www.paypal.com/donate"
+            method="post"
+            target="_blank"
+            class="paypal-form"
+          >
+            <input type="hidden" name="business"      value="gravel9698@gmail.com">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="item_name"     value="Support Futuro Vivo">
+            <input type="hidden" name="amount"        value="50">
+            <input type="hidden" name="no_recurring"  value="0">
+            <button type="submit" class="paypal-btn" id="paypal-submit">
+              <svg height="22" viewBox="0 0 101 32" xmlns="http://www.w3.org/2000/svg" style="height:22px;filter:brightness(0) invert(1)">
+                <path d="M 12.237 2.8 L 4.437 2.8 C 3.937 2.8 3.437 3.2 3.337 3.7 L 0.237 23.7 C 0.137 24.1 0.437 24.4 0.837 24.4 L 4.537 24.4 C 5.037 24.4 5.537 24 5.637 23.5 L 6.437 18.1 C 6.537 17.6 6.937 17.2 7.537 17.2 L 10.037 17.2 C 15.137 17.2 18.137 14.7 18.937 9.8 C 19.237 7.7 18.937 6 17.937 4.8 C 16.837 3.5 14.837 2.8 12.237 2.8 Z M 13.137 10.1 C 12.737 12.9 10.537 12.9 8.537 12.9 L 7.337 12.9 L 8.137 7.7 C 8.137 7.4 8.437 7.2 8.737 7.2 L 9.237 7.2 C 10.637 7.2 11.937 7.2 12.637 8 C 13.137 8.4 13.337 9.1 13.137 10.1 Z"/>
+                <path d="M 35.437 10 L 31.737 10 C 31.437 10 31.137 10.2 31.137 10.5 L 30.937 11.5 L 30.637 11.1 C 29.737 9.8 27.937 9.4 26.137 9.4 C 22.037 9.4 18.537 12.5 17.837 16.9 C 17.437 19.1 17.937 21.2 19.237 22.6 C 20.437 23.9 22.137 24.5 24.037 24.5 C 27.337 24.5 29.237 22.4 29.237 22.4 L 29.037 23.4 C 28.937 23.8 29.237 24.2 29.637 24.2 L 33.037 24.2 C 33.537 24.2 34.037 23.8 34.137 23.3 L 36.137 10.8 C 36.237 10.4 35.837 10 35.437 10 Z M 30.337 17.1 C 29.937 19.2 28.337 20.6 26.237 20.6 C 25.137 20.6 24.337 20.3 23.737 19.6 C 23.137 18.9 22.937 18 23.137 17 C 23.537 14.9 25.137 13.5 27.237 13.5 C 28.337 13.5 29.137 13.8 29.737 14.5 C 30.237 15.2 30.437 16.1 30.337 17.1 Z"/>
+                <path d="M 55.337 10 L 51.637 10 C 51.237 10 50.937 10.2 50.737 10.5 L 45.537 18.1 L 43.337 10.8 C 43.137 10.3 42.737 10 42.237 10 L 38.637 10 C 38.137 10 37.837 10.5 38.037 11 L 42.137 23.1 L 38.237 28.6 C 37.937 29.1 38.237 29.6 38.737 29.6 L 42.437 29.6 C 42.837 29.6 43.137 29.4 43.337 29.1 L 55.837 10.9 C 56.137 10.5 55.837 10 55.337 10 Z"/>
+                <path d="M 67.737 2.8 L 59.937 2.8 C 59.437 2.8 58.937 3.2 58.837 3.7 L 55.737 23.6 C 55.637 24 55.937 24.3 56.337 24.3 L 60.337 24.3 C 60.737 24.3 61.037 24 61.037 23.7 L 61.937 18 C 62.037 17.5 62.437 17.1 63.037 17.1 L 65.537 17.1 C 70.637 17.1 73.637 14.6 74.437 9.7 C 74.737 7.6 74.437 5.9 73.437 4.7 C 72.237 3.5 70.337 2.8 67.737 2.8 Z M 68.637 10.1 C 68.237 12.9 66.037 12.9 64.037 12.9 L 62.837 12.9 L 63.637 7.7 C 63.637 7.4 63.937 7.2 64.237 7.2 L 64.737 7.2 C 66.137 7.2 67.437 7.2 68.137 8 C 68.637 8.4 68.737 9.1 68.637 10.1 Z"/>
+                <path d="M 90.937 10 L 87.237 10 C 86.937 10 86.637 10.2 86.637 10.5 L 86.437 11.5 L 86.137 11.1 C 85.237 9.8 83.437 9.4 81.637 9.4 C 77.537 9.4 74.037 12.5 73.337 16.9 C 72.937 19.1 73.437 21.2 74.737 22.6 C 75.937 23.9 77.637 24.5 79.537 24.5 C 82.837 24.5 84.737 22.4 84.737 22.4 L 84.537 23.4 C 84.437 23.8 84.737 24.2 85.137 24.2 L 88.537 24.2 C 89.037 24.2 89.537 23.8 89.637 23.3 L 91.637 10.8 C 91.737 10.4 91.337 10 90.937 10 Z M 85.737 17.1 C 85.337 19.2 83.737 20.6 81.637 20.6 C 80.537 20.6 79.737 20.3 79.137 19.6 C 78.537 18.9 78.337 18 78.537 17 C 78.937 14.9 80.537 13.5 82.637 13.5 C 83.737 13.5 84.537 13.8 85.137 14.5 C 85.737 15.2 85.837 16.1 85.737 17.1 Z"/>
+                <path d="M 95.337 3.3 L 92.137 23.6 C 92.037 24 92.337 24.3 92.737 24.3 L 95.937 24.3 C 96.437 24.3 96.937 23.9 97.037 23.4 L 100.237 3.5 C 100.337 3.1 100.037 2.8 99.637 2.8 L 96.037 2.8 C 95.637 2.8 95.437 3 95.337 3.3 Z"/>
+              </svg>
+              Donate Securely with PayPal
+            </button>
+          </form>
+
+          <p class="donate-note">
+            🔒 Secure checkout &nbsp;·&nbsp; No PayPal account required &nbsp;·&nbsp; All major cards accepted
+          </p>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="donate-sidebar">
+
+          <div class="info-card fade-in">
+            <h3>💌 Donate by Check</h3>
+            <p>Make checks payable to:</p>
+            <address style="margin-top:.6rem; font-weight:600; color:var(--text-dark);">
+              Support Futuro Vivo Charitable Corp.
+            </address>
+            <address style="margin-top:.35rem;">
+              141 Lantern Wick Place<br>
+              Ponte Vedra Beach, FL 32082
+            </address>
+            <div class="tax-badge">
+              <span class="icon">✅</span>
+              <p>Support Futuro Vivo is an IRS-approved 501(c)(3) nonprofit. Your donation is tax-deductible to the full extent of the law.</p>
+            </div>
+          </div>
+
+          <div class="info-card fade-in">
+            <h3>🏢 Corporate Matching</h3>
+            <p>Many employers match charitable donations — sometimes doubling or tripling your gift at no extra cost to you.</p>
+            <p style="margin-top:.65rem;">We are approved to receive matching donations from programs including:</p>
+            <ul class="match-list" style="margin-top:.65rem;">
+              <li>Bank of America</li>
+              <li>Deutsche Bank</li>
+              <li>And many more</li>
+            </ul>
+            <p style="margin-top:.75rem;">Check with your HR department to see if your company matches. Contact us for our EIN and any required documentation.</p>
+          </div>
+
+          <div class="info-card fade-in">
+            <h3>📋 Jacksonville Community Foundation</h3>
+            <p>Support Futuro Vivo is approved by the Jacksonville Community Foundation, providing an additional layer of accountability and trust.</p>
+          </div>
+
+          <div class="info-card fade-in">
+            <h3>❓ Questions?</h3>
+            <p>We're happy to answer any questions about how your donation is used.</p>
+            <p style="margin-top:.65rem;"><a href="mailto:gravel9698@gmail.com" style="color:var(--primary-light); font-weight:600;">gravel9698@gmail.com</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST BAND ========== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">Why Give to Us</span>
+        <h2>Your Donation, Fully Accounted For</h2>
+        <p>We believe radical transparency builds lasting trust. Here's our promise to every donor.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card fade-in">
+          <div class="program-icon">💯</div>
+          <h3>100% to the School</h3>
+          <p>Every cent you donate goes directly to Futuro Vivo School. Our board operates entirely as volunteers — there are no administrative fees deducted.</p>
+        </div>
+        <div class="program-card fade-in">
+          <div class="program-icon">🏛️</div>
+          <h3>IRS-Approved Nonprofit</h3>
+          <p>Support Futuro Vivo is a fully registered 501(c)(3) charitable corporation. All donations are tax-deductible to the extent permitted by law.</p>
+        </div>
+        <div class="program-card fade-in">
+          <div class="program-icon">🤝</div>
+          <h3>30 Years of Trust</h3>
+          <p>Futuro Vivo School has operated continuously for over 30 years. Our track record speaks for itself — children educated, lives changed.</p>
+        </div>
+        <div class="program-card fade-in">
+          <div class="program-icon">🔒</div>
+          <h3>Secure Giving</h3>
+          <p>Online donations are processed by PayPal — one of the world's most trusted and secure payment platforms. Your financial data is always protected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-section">
+    <div class="container fade-in">
+      <h2>Every Dollar Makes a Difference</h2>
+      <p>658 children are counting on the generosity of people like you. Give today and change a life.</p>
+      <div class="cta-buttons">
+        <a href="#top" class="btn btn-primary" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Donate Now</a>
+        <a href="impact.html" class="btn btn-white">See Our Impact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-mark">FV</div>
+            Support Futuro Vivo
+          </a>
+          <p>A U.S. 501(c)(3) nonprofit dedicated to providing education, medical care, and dignity to children at Futuro Vivo School in Guerra, Dominican Republic.</p>
+          <span class="nonprofit-badge">✓ IRS-Approved 501(c)(3)</span>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About the School</a></li>
+            <li><a href="impact.html">Our Impact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:gravel9698@gmail.com">gravel9698@gmail.com</a></li>
+            <li>141 Lantern Wick Place</li>
+            <li>Ponte Vedra Beach, FL 32082</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Support Futuro Vivo Charitable Corp. All rights reserved.</p>
+        <p>Jacksonville Community Foundation Approved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Wire amount buttons to update the PayPal form's hidden amount input
+    const amountInput = document.querySelector('input[name="amount"]');
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        if (amountInput) amountInput.value = btn.dataset.amount || '';
+      });
+    });
+  </script>
+</body>
+</html>
