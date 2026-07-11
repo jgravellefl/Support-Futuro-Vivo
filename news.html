@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Impact — Support Futuro Vivo</title>
-  <meta name="description" content="See the real-world impact of your donations: 790+ children served, $250,000+ raised, and lives transformed at Futuro Vivo School.">
+  <title>News — Support Futuro Vivo</title>
+  <meta name="description" content="Latest updates from Futuro Vivo School — new classrooms, medical outreach, student milestones, and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -50,43 +50,23 @@
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Home</a>
         <span>›</span>
-        <span>Our Impact</span>
+        <span>News</span>
       </nav>
-      <h1>Our Impact</h1>
-      <p>Here's what your generosity makes possible at Futuro Vivo School.</p>
+      <h1>News</h1>
+      <p>Updates from Futuro Vivo School — see what your support makes possible.</p>
     </div>
   </section>
 
-  <!-- ========== STATS ========== -->
-  <section class="section section-alt">
+  <!-- ========== NEWS GRID ========== -->
+  <section class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="eyebrow">By the Numbers</span>
-        <h2>The Difference We're Making</h2>
+        <span class="eyebrow">Latest Updates</span>
+        <h2>News from the School</h2>
+        <p>Stories and milestones from Futuro Vivo, shared as they happen.</p>
       </div>
-      <div class="impact-stats-grid">
-        <div class="impact-stat-card fade-in">
-          <div class="number" data-target="790" data-suffix="+">790+</div>
-          <div class="label">Students Enrolled</div>
-          <div class="desc">Students receiving free education, food, and healthcare at Futuro Vivo School</div>
-        </div>
-        <div class="impact-stat-card fade-in">
-          <div class="number">$250K+</div>
-          <div class="label">Total Raised</div>
-          <div class="desc">USD distributed directly to the school since founding</div>
-        </div>
-
-        <div class="impact-stat-card fade-in">
-          <div class="number">100%</div>
-          <div class="label">Donation Efficiency</div>
-          <div class="desc">Every dollar donated goes directly to the school</div>
-        </div>
-
-        <div class="impact-stat-card fade-in">
-          <div class="number" data-target="400" data-suffix="+">400+</div>
-          <div class="label">Students Provided Transportation</div>
-          <div class="desc">Students given transportation to and from school each day</div>
-        </div>
+      <div class="news-grid" id="news-grid">
+        <!-- populated by js/news.js -->
       </div>
     </div>
   </section>
@@ -141,6 +121,25 @@
     </div>
   </footer>
 
+  <!-- ========== NEWS POST MODAL ========== -->
+  <div class="news-modal" id="news-modal" role="dialog" aria-modal="true" aria-labelledby="news-modal-title">
+    <div class="news-modal-overlay" id="news-modal-overlay"></div>
+    <div class="news-modal-panel">
+      <button class="news-modal-close" id="news-modal-close" aria-label="Close">&times;</button>
+      <div class="news-modal-content" id="news-modal-content">
+        <!-- populated by js/news.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== LIGHTBOX (zoom individual gallery photos inside a post) ========== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="js/news-data.js"></script>
+  <script src="js/news.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
