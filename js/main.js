@@ -76,27 +76,41 @@ document.querySelectorAll('.slideshow-wrap').forEach(wrap => {
 
   const slides = Array.from(container.querySelectorAll('.slide'));
   const dots   = Array.from(wrap.querySelectorAll('.dot'));
-  let current  = 0;
-  let timer    = null;
+  const AUTO_DELAY   = 5000;
+  const MANUAL_DELAY = 10000;
+  let current   = 0;
+  let timer     = null;
+  let remaining = AUTO_DELAY;
+  let tickStart = null;
 
-  function goTo(n) {
+  function goTo(n, delay = AUTO_DELAY) {
     slides[current]?.classList.remove('active');
     dots[current]?.classList.remove('active');
     current = ((n % slides.length) + slides.length) % slides.length;
     slides[current]?.classList.add('active');
     dots[current]?.classList.add('active');
+    remaining = delay;
   }
 
-  function startAuto() { if (slides.length > 1) timer = setInterval(() => goTo(current + 1), 5000); }
-  function stopAuto()  { clearInterval(timer); }
+  function startAuto() {
+    if (slides.length <= 1) return;
+    tickStart = Date.now();
+    timer = setTimeout(() => { goTo(current + 1); startAuto(); }, remaining);
+  }
+  function stopAuto() {
+    if (!timer) return;
+    clearTimeout(timer);
+    remaining = Math.max(0, remaining - (Date.now() - tickStart));
+    timer = null;
+  }
 
   if (slides.length > 0) {
     startAuto();
 
-    container.querySelector('.slide-next')?.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
-    container.querySelector('.slide-prev')?.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+    container.querySelector('.slide-next')?.addEventListener('click', () => { stopAuto(); goTo(current + 1, MANUAL_DELAY); startAuto(); });
+    container.querySelector('.slide-prev')?.addEventListener('click', () => { stopAuto(); goTo(current - 1, MANUAL_DELAY); startAuto(); });
 
-    dots.forEach((dot, i) => dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); }));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { stopAuto(); goTo(i, MANUAL_DELAY); startAuto(); }));
 
     container.addEventListener('mouseenter', stopAuto);
     container.addEventListener('mouseleave', startAuto);
