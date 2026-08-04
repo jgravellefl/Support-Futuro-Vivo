@@ -133,6 +133,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   font-weight: 800;
   letter-spacing: .02em;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 .nav-links {
