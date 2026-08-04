@@ -8,8 +8,10 @@
 :root {
   --primary:        #0f2d4a;
   --primary-light:  #1a4f78;
-  --accent:         #e8834a;
-  --accent-dark:    #cf6b35;
+  --accent:         #dba43e;
+  --accent-dark:    #c28f2c;
+  --accent-green:      #4a7d36;
+  --accent-green-dark: #3a6b2c;
   --bg-light:       #f5f7fa;
   --bg-white:       #ffffff;
   --text-dark:      #1a202c;
@@ -61,7 +63,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   border: 2px solid transparent;
   white-space: nowrap;
 }
-.btn-primary  { background: var(--accent); color: #fff; }
+.btn-primary  { background: var(--accent); color: var(--primary); }
 .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn-outline  { border-color: var(--primary); color: var(--primary); background: transparent; }
 .btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
@@ -163,7 +165,8 @@ p  { color: var(--text-muted); line-height: 1.8; }
 .nav-links a:hover::after,
 .nav-links a.active::after { width: 100%; }
 
-.nav-cta { padding: .55rem 1.3rem; font-size: .88rem; }
+.nav-cta { padding: .55rem 1.3rem; font-size: .88rem; background: var(--accent-green); color: #fff; }
+.nav-cta:hover { background: var(--accent-green-dark); }
 
 /* Hamburger */
 .hamburger {
@@ -209,7 +212,8 @@ p  { color: var(--text-muted); line-height: 1.8; }
 }
 .mobile-nav a:hover,
 .mobile-nav a.active { background: var(--bg-light); color: var(--accent); }
-.mobile-donate { margin-top: 1rem; display: block; text-align: center; }
+.mobile-donate { margin-top: 1rem; display: block; text-align: center; background: var(--accent-green); color: #fff; }
+.mobile-donate:hover { background: var(--accent-green-dark); }
 
 
 /* ============================================
@@ -304,7 +308,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   position: absolute;
   bottom: -1.5rem; left: -1.5rem;
   background: var(--accent);
-  color: #fff;
+  color: var(--primary);
   padding: 1.4rem 1.6rem;
   border-radius: var(--radius-lg);
   text-align: center;
