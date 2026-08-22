@@ -710,53 +710,6 @@ p  { color: var(--text-muted); line-height: 1.8; }
 .donate-card h2 { color: var(--text-dark); margin-bottom: .6rem; }
 .donate-card .subtitle { margin-bottom: 2rem; font-size: 1rem; }
 
-.amount-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .7rem;
-  margin-bottom: 2rem;
-}
-.amount-btn {
-  background: var(--bg-light);
-  border: 2px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1rem .75rem;
-  text-align: center;
-  cursor: pointer;
-  transition: var(--transition);
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--text-dark);
-}
-.amount-btn:hover, .amount-btn.selected {
-  border-color: var(--primary);
-  background: #e8f0f8;
-  color: var(--primary);
-}
-.amount-sub {
-  font-size: .7rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  display: block;
-  margin-top: .2rem;
-}
-.amount-btn.selected .amount-sub { color: var(--primary-light); }
-
-.divider {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 1.5rem 0;
-  color: var(--text-muted);
-  font-size: .85rem;
-}
-.divider::before, .divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
 .paypal-form { margin-top: .5rem; }
 .paypal-btn {
   display: flex;
@@ -857,8 +810,6 @@ p  { color: var(--text-muted); line-height: 1.8; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-brand { grid-column: unset; }
   .footer-bottom { flex-direction: column; text-align: center; }
-
-  .amount-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {

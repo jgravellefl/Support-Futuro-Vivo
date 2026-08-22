@@ -117,21 +117,6 @@ document.querySelectorAll('.slideshow-wrap').forEach(wrap => {
   }
 });
 
-// ---- Donate: amount selection ----
-const PAYPAL_BASE = 'https://www.paypal.com/donate/?business=gravel9698%40gmail.com&currency_code=USD&item_name=Support%20Futuro%20Vivo';
-
-document.querySelectorAll('.amount-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    const amount    = btn.dataset.amount;
-    const donateBtn = document.getElementById('paypal-submit');
-    if (donateBtn && amount) {
-      donateBtn.closest('form').querySelector('[name="amount"]').value = amount;
-    }
-  });
-});
-
 // ---- Lightbox ----
 const lightbox      = document.getElementById('lightbox');
 const lightboxImg   = document.getElementById('lightbox-img');
